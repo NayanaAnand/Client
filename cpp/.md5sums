@@ -1,0 +1,10 @@
+7ee5cb6c9611c626e0f9a2623e6e7031  main.cpp
+a92f7aedda6c90b5482d647dea9418d2  Client_base.h
+8bfcd22353c3a57fee561ad86ee2a56b  reconf
+ebdac45898ce4cd40fa655d5c28f45ff  Client.h
+de1a1e0ae05c2c929a9d97470ed2d897  configure.ac
+a545aa5b940a06d838dfbbd50dfa84d3  Makefile.am
+3ac205abf09f128f85ccdf6cd25036e7  Makefile.am.ide
+726a4151bb73f88775be2e71a3cda693  Client.cpp
+2b2faa5cfc83438427491f4be5d6ee59  build.sh
+1a9b7f9aba17e7cf9f5bdb0d07184845  Client_base.cpp
