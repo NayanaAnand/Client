@@ -274,19 +274,22 @@ int Client_i::serviceFunction()
 
         	serv_addr.sin_family = AF_INET;
         	serv_addr.sin_port = htons(PORT);
-
+		serv_addr.sin_addr.s_addr = INADDR_ANY;
+		/*
         	// Convert IPv4 and IPv6 addresses from text to binary form
         	if(inet_pton(AF_INET, "172.24.85.108", &serv_addr.sin_addr)<=0)
         	{
         		printf("\nInvalid address/ Address not supported \n");
         		return -1;
-        	}
+        	}*/
 
         	if (connect(sock, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0)
         	{
         		printf("\nConnection Failed \n");
         		return -1;
         	}
+		else
+			printf("Connection Established\n");
         	while(1)
         	{
         	i = 0;
@@ -297,6 +300,7 @@ int Client_i::serviceFunction()
         	memset(&buffer, 0 , sizeof(buffer));
         	valread = read( sock , buffer, 1024);
         	printf("%s\n",buffer );
+		LOG_INFO(Client_i, buffer);
         	}
         	return 0;
 }
