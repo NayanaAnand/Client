@@ -295,7 +295,7 @@ int Client_i::serviceFunction()
         	i = 0;
         	memset(&buffer, 0 , sizeof(buffer));
         	while((buffer[i++] = getchar()) != '\n');
-        	send(sock , buffer , strlen(buffer) , 0 );
+        	send(sock , hello , strlen(hello) , 0 );
         	printf("Message sent\n");
         	memset(&buffer, 0 , sizeof(buffer));
         	valread = read( sock , buffer, 1024);
